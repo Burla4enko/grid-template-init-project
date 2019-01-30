@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: $base-font;
+  letter-spacing: 0.1em;
+  color: $gray-color;
+}
+
+a {
+  color: $light-color;
+  text-decoration: none;
+}
+h1 {
+  font-family: $header-font;
+  font-weight: 300;
+  line-height: 1.2em;
+  
+  @media (min-width: 993px) {
+		font-size: 3.75rem;
+	}
+
+	@media (max-width: 992px) and (min-width: 769px) {
+		font-size: 2.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.875rem;
+  }
+}
+h2 {
+  font-family: $header-font;
+  line-height: 1.2em;  
+  color: $base-color;
+
+  @media (min-width: 993px) {
+		font-size: 2.5rem;
+	}
+
+	@media (max-width: 992px) and (min-width: 769px) {
+		font-size: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  color: $gray-color;
+}
+
+p {
+  letter-spacing: 1px;
+  color: $gray-color;
+}
+
+.container {
+  display: grid;
+  max-width: 1340px;
+  margin: auto;
+  padding: 0 $gutter;
+}
+.btn,
+.btn-accent {
+  display: block;
+  min-width: 250px;
+  height: 60px;
+  margin: 0 ($gutter / 2);
+  padding: 18px $gutter;
+  text-align: center;
+  background-color: rgba($light-color, 0.1);  
+  transition: background-color 0.5s, border-color 0.5s;  
+  letter-spacing: 0.15em;
+  border-color: $light-color;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.125rem;
+  
+}
+.btn-set {
+  display: grid;
+  padding: 0 0 $gutter;
+  justify-items: center;
+
+  @media (min-width: 993px) {
+		grid-column: 1 / span 4;
+  }
+  
+  @media (max-width: 992px) and (min-width: 769px) {
+		grid-column: 1 / span 3;
+  }
+
+  @media (max-width: 768px) and (min-width: 577px) {
+    grid-column: 1 / span 2;
+  }
+
+  @media (max-width: 576) {
+    grid-column: 1fr;
+  }
+}
+.btn-accent {
+  border-color: $base-color;
+  background-color: rgba($base-color, 0.8);
+
+  @media (min-width: 577px) {
+    min-width: 350px;
+  }
+}
+.btn-accent:hover {
+  background-color: $accent-color;
+}
+.btn:hover,
+.btn-accent:focus {
+  background-color: $accent-color;
+}
+.section {  
+  @media (min-width: 993px) {
+    padding-top: $gutter * 5;
+    padding-bottom: $gutter * 4;
+  }
+
+  @media (max-width: 992px) and (min-width: 769px) {
+    padding-top: $gutter * 4;
+    padding-bottom: $gutter * 3;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: $gutter * 3;
+    padding-bottom: $gutter * 2;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}
