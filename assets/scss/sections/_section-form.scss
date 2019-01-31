@@ -54,7 +54,8 @@
   	&:hover,
     &:focus {
     	cursor: pointer;
-    	border-color: $light-color;    	
+			border-color: $light-color;  
+			background-color: $accent-color;  	
     }
   }
 }

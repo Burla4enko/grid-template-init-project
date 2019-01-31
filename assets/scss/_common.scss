@@ -77,9 +77,19 @@ p {
   border-color: $light-color;
   border-width: 2px;
   border-style: solid;
-  font-size: 1.125rem;
+  font-size: 1.125rem; 
   
+  &:hover,
+  &:focus {    
+    background-color: $accent-color;
+  }
 }
+
+.btn-accent {
+  border-color: $base-color;
+  background-color: rgba($base-color, 0.8);   
+}
+
 .btn-set {
   display: grid;
   padding: 0 0 $gutter;
@@ -100,22 +110,18 @@ p {
   @media (max-width: 576) {
     grid-column: 1fr;
   }
-}
-.btn-accent {
-  border-color: $base-color;
-  background-color: rgba($base-color, 0.8);
 
-  @media (min-width: 577px) {
-    min-width: 350px;
+  .btn-accent {
+    @media (min-width: 577px) {
+      min-width: 350px;
+    }
+
+    @media (max-width: 576px) {
+      margin: 0;
+    }
   }
 }
-.btn-accent:hover {
-  background-color: $accent-color;
-}
-.btn:hover,
-.btn-accent:focus {
-  background-color: $accent-color;
-}
+
 .section {  
   @media (min-width: 993px) {
     padding-top: $gutter * 5;

@@ -556,6 +556,17 @@ p {
   font-size: 1.125rem;
 }
 
+.btn:hover, .btn:focus,
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: #d66926;
+}
+
+.btn-accent {
+  border-color: #2d3651;
+  background-color: rgba(45, 54, 81, 0.8);
+}
+
 .btn-set {
   display: -ms-grid;
   display: grid;
@@ -594,24 +605,16 @@ p {
   }
 }
 
-.btn-accent {
-  border-color: #2d3651;
-  background-color: rgba(45, 54, 81, 0.8);
-}
-
 @media (min-width: 577px) {
-  .btn-accent {
+  .btn-set .btn-accent {
     min-width: 350px;
   }
 }
 
-.btn-accent:hover {
-  background-color: #d66926;
-}
-
-.btn:hover,
-.btn-accent:focus {
-  background-color: #d66926;
+@media (max-width: 576px) {
+  .btn-set .btn-accent {
+    margin: 0;
+  }
 }
 
 @media (min-width: 993px) {
@@ -1374,6 +1377,7 @@ p {
 .form .btn-accent:hover, .form .btn-accent:focus {
   cursor: pointer;
   border-color: #ffffff;
+  background-color: #d66926;
 }
 
 @media (max-width: 768px) and (min-width: 577px) {
@@ -1404,8 +1408,8 @@ p {
 
 @media (max-width: 768px) and (min-width: 577px) {
   .posts .container {
-    -ms-grid-columns: (1fr)[1fr];
-        grid-template-columns: repeat(1fr 1fr);
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1444,6 +1448,7 @@ p {
 }
 
 .posts-item {
+  display: block;
   background-color: #f2f2f2;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;

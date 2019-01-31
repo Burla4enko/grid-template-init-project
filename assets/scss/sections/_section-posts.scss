@@ -11,7 +11,7 @@
 		}
 
 		@media (max-width: 768px) and (min-width: 577px) {
-			grid-template-columns: repeat(1fr 1fr);
+			grid-template-columns: 1fr 1fr;
 		}
 
 		@media (max-width: 576px) {
@@ -38,6 +38,7 @@
 }
 
 .posts-item {
+	display: block;
 	background-color: lighten($gray-light, 5%);
 	transition: background-color 0.5s;
 	
